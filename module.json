@@ -1,62 +1,69 @@
 {
-  "id": "ammo-tracker-fvtt",
-  "title": "Ammo Tracker",
-  "description": "",
-  "version": "This is auto replaced",
-  "library": "false",
-  "manifestPlusVersion": "1.0.0",
-  "compatibility": {
-    "minimum": 10,
-    "verified": 12,
-    "maximum": 12
-  },
-  "socket": true,
-  "authors": [
-    {
-      "name": "NekroDarkmoon",
-      "url": "https://github.com/NekroDarkmoon",
-      "discord": "Nekro Darkmoon#2995",
-      "ko-fi": "https://ko-fi.com/nekrodarkmoon" 
-    }
-  ],
-  "relationships": {
-    "systems": [{
-      "id": "a5e",
-      "type": "system",
-      "manifest": "https://raw.githubusercontent.com/Pjb518/FoundryVTT-Level-Up-Official/main/public/system.json"
+    "id": "ammo-tracker-fvtt",
+    "title": "Ammo Tracker",
+    "description": "",
+    "version": "This is auto replaced",
+    "library": "false",
+    "manifestPlusVersion": "1.0.0",
+    "compatibility": {
+        "minimum": 13,
+        "verified": 13,
+        "maximum": 14
     },
-    {
-      "id": "dnd5e",
-      "type": "system",
-      "compatibility": {
-          "minimum": "3.0.0"
+    "socket": true,
+    "authors": [
+        {
+            "name": "NekroDarkmoon",
+            "url": "https://github.com/NekroDarkmoon",
+            "discord": "Nekro Darkmoon#2995",
+            "ko-fi": "https://ko-fi.com/nekrodarkmoon"
+        },
+        {
+            "name": "Paul Bromwell",
+            "url": "https://github.com/pbromwelljr"
         }
-    }],
-    "requires": [{
-      "id": "socketlib",
-      "type": "module"
-    }]
-  },
-  "conflicts": [],
-  "esmodules": [
-    "./index.js"
-  ],
-  "styles": ["/styles/module.css"],
-  "system": ["dnd5e"],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "languages/en.json"
-    }
-  ],
-  "url": "This is auto replaced",
-  "manifest": "This is auto replaced",
-  "download": "This is auto replaced",
-  "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
-  ]
+    ],
+    "relationships": {
+        "systems": [
+            {
+                "id": "dnd5e",
+                "type": "system",
+                "compatibility": {
+                    "minimum": "5.0.0"
+                }
+            }
+        ],
+        "requires": [
+            {
+                "id": "socketlib",
+                "type": "module"
+            }
+        ]
+    },
+    "conflicts": [],
+    "esmodules": [
+        "./index.js"
+    ],
+    "styles": [
+        "/styles/module.css"
+    ],
+    "system": [
+        "dnd5e"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "languages/en.json"
+        }
+    ],
+    "url": "This is auto replaced",
+    "manifest": "This is auto replaced",
+    "download": "This is auto replaced",
+    "media": [
+        {
+            "type": "icon",
+            "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
+        }
+    ]
 }
