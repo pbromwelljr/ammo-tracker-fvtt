@@ -1,5 +1,8 @@
 name: Release Creation
 
+permissions:
+  contents: write
+
 on: 
   release:
     types: [published]
@@ -8,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v6
 
     # get part of the tag after the `v`
     - name: Extract tag version number
