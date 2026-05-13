@@ -28,7 +28,7 @@ export class AmmoTracker {
 		// Get projectile data for all actors
 		const projectileData = await this.getProjectileData(actors);
 		await currCombat.setFlag(moduleName, 'projectileData', projectileData);
-		console.info(`Tracking ammo for ${this.combatId}`);
+        console.info(`${moduleTag} | Tracking ammo for ${this.combatId}`);
 	}
 
 	/**
@@ -41,14 +41,14 @@ export class AmmoTracker {
 		for (const actor of actors) {
 			const usedAmmo = this.usedAmmo(actor);
 			// Skip if no ammo consumed
-			if (usedAmmo.length == 0) continue;
+            if (!usedAmmo || usedAmmo.length == 0) continue;
 
 			sentMsgs[actor._id] = await this.toMessage(actor, usedAmmo);
 		}
 
 		// Set setting for deletion
 		await game.settings.set(moduleName, 'chat-trackers', sentMsgs);
-		console.info(`Ended tracking ammo for ${this.combatId}`);
+        console.info(`${moduleTag} | Ended tracking ammo for ${this.combatId}`);
 	}
 
 	/**
