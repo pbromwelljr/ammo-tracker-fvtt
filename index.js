@@ -11,13 +11,10 @@ let trackers = [];
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //                              Main
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Hooks.once('init', () => {
+Hooks.once('init', async () => {
     console.log(`${moduleTag} | Initializing...`);
-    registerSettings().then(() => {
-        console.log(`${moduleTag} | Initialized`);
-    }).catch((e) => {
-        console.error(`${moduleTag} | Error during initialization: ${e}`);
-    });
+    await registerSettings();
+    console.log(`${moduleTag} | Initialized`);
 });
 
 Hooks.on('socketlib.ready', () => {
