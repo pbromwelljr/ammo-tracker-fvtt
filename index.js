@@ -11,7 +11,7 @@ let trackers = [];
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //                              Main
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Hooks.on('init', async () => {
+Hooks.once('init', async () => {
 	await registerSettings();
 	console.log(`${moduleTag} | Initialized`);
 });
